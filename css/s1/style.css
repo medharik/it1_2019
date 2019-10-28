@@ -1,0 +1,21 @@
+h2,
+h1 {
+  text-align: center;
+  color: rgb(8, 8, 146);
+  background: rgb(220, 220, 243);
+  padding: 10px;
+}
+p {
+  text-align: justify;
+  border: blue 2px solid;
+  padding: 20px;
+  text-indent: 30px;
+}
+h1 + img {
+  width: 100%;
+}
+
+p img {
+  float: left;
+  margin: 20px;
+}
