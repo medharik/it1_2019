@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+ul {
+  background: black;
+  list-style: none;
+  text-align: center;
+}
+/*block =>dimension modifiable , disposition verticale*/
+/*inline => dimension non modifiable , posionnement horizontal, taille = celle du contenu */
+/*inline-block => dimension modifiable , posionnement en ligne*/
+li {
+  border: 1px solid black;
+  display: inline-block;
+  color: black;
+}
+li a {
+  color: rgb(202, 202, 202);
+  background: black;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+li a:hover {
+  color: white;
+  background: rgb(50, 53, 50);
+}
+
+img {
+  width: 100%;
+}
+.parent {
+  height: 400px;
+}
+
+.e {
+  height: 400px;
+  width: 50%;
+  border: 2px solid grey;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.enfant1 {
+  float: left;
+  background: url(images/HML42.jpg);
+  background-size: cover;
+  text-align: center;
+}
+.enfant2 {
+  float: right;
+  text-align: center;
+}
+
+.enfant2 img {
+  width: 250px;
+}
