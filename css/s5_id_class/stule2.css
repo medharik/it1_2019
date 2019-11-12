@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: 100%;
+
+  background: grey;
+}
+#logo {
+  width: 200px;
+
+  background: red;
+  float: left;
+}
+#menu {
+  width: 600px;
+
+  background: rgb(8, 228, 26);
+  float: right;
+}
+.h {
+  height: 80px;
+}
+
+#banner {
+  width: 1000px;
+  height: 500px;
+  background: yellow;
+  margin: auto;
+}
