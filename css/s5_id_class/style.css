@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0px 1px 5px black;
+  margin: auto;
+}
+/*pour definir un id : style unique*/
+#logo {
+  width: 200px;
+
+  float: left;
+}
+#menu {
+  width: 700px;
+
+  float: right;
+}
+/*pour definir une classe : style repetitif*/
+.hauteur {
+  height: 50px;
+}
+
+.b {
+  border: 0px solid black;
+}
+/*menu */
+ul {
+  list-style: none;
+  text-align: right;
+}
+ul li {
+  display: inline-block;
+}
+ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: red;
+  text-transform: capitalize;
+}
+ul li a:hover {
+  background: pink;
+}
+
+#banner {
+  width: 1024px;
+
+  background: black;
+  margin: auto;
+  margin-top: 10px;
+}
+#banner img {
+  width: 100%;
+}
