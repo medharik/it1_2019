@@ -1,0 +1,37 @@
+Atelier 2 SGBD :
+1-creer une bd : atelier2
+2-creez y une table : 
+	emplyee(id, nom,prenom,salaire, specialite , commission, adresse)
+	id: int primary key auto_increment
+	nom : varchar(50) not null ,
+	prenom : varchar(50) not null ,
+	salaire : float  default 3000
+	specialite : varchar(50) default 'inconnu'
+	commission : float  default 0
+3-
+RAPPEL :
+LMD : insert , update et delete
+insert into
+ employee (nom,prenom,salaire,specialite)
+values ('alami','ali',9000,'info')
+
+ update employee set
+ salaire =salaire + 100 ,
+ specialite ='RH'
+ where specialite like '%info%'
+
+ delete from employee where id=1
+
+-- recherche :
+exemples : 
+liste des employes informaticiens
+liste des employes ayant un salaire > = 4000
+liste des employees habitant a casablanca
+et ayant un salaire > 5000
+liste ds employes en ressources humaines et habitant a casablanca 
+
+E-3 inserer 10 employes
+E-4 augmenter le 1000 DHS le salaire des informaticiens
+E-5 supprimer l'employe 'alami' 'ali'
+E-6 afficher la liste des informaticiens 
+E-7 liste des employes n'ayant pas de commission

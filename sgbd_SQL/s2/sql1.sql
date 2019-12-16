@@ -3,4 +3,4 @@
 -- INSERT INTO produit(libelle,prix,qte) VALUES ('hp dv 6',4000,10)
 SELECT
   *
-FROM produitproduit
+FROM produit
