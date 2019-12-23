@@ -1,0 +1,27 @@
+-- les fonctions de groupe ( ou d'aggregation )  :
+-- count : pour compter le nombre de records (lignes)  : select count(*) from produit 
+-- max  : recupere la valeur max d'un champs : select max(prix) from produit
+-- min 
+-- sum : calcul la sommes des valeurs d'un  champs pour un groupe de records : select sum(prix) from produit
+
+--  avg  : calculer la moyenne  : select avg(prix) from produit
+INSERT INTO produit (libelle , prix , qtestock , categorie ) VALUES ('sony vaio s8', 8000,0,'Pc Desktop');
+INSERT INTO produit (libelle , prix , qtestock , categorie ) VALUES ('iPad s10', 10000,0,'Tablette');
+INSERT INTO produit (libelle , prix , qtestock , categorie ) VALUES ('sumsung A10', 9000,0,'Tablette ');
+INSERT INTO produit (libelle , prix , qtestock , categorie ) VALUES ('sumsung s10', 8000,0,'Smartphone');
+INSERT INTO produit (libelle , prix , qtestock , categorie ) VALUES ('iphone 12', 8000,0,'Smartphone');
+-- SELECT COUNT(*) AS "nombre de produit" , MAX(prix)  AS "prix maxi" FROM produit
+-- le nomnbre de produit par categorie 
+-- SELECT COUNT(*) FROM produit 
+-- GROUP BY categorie 
+-- le stock par categorie 
+-- SELECT categorie, SUM(qtestock) FROM produit
+-- GROUP BY categorie
+-- SELECT * FROM produit
+-- SELECT categorie , MAX(prix) , MIN(prix) , SUM(prix) , AVG(prix) , COUNT(*) FROM produit 
+-- GROUP  BY categorie
+ 
+ -- avec les requetes impriquees 
+ -- SELECT * FROM produit WHERE prix =  (SELECT min(prix) FROM produit)
+ -- SELECT * FROM produit WHERE prix >  (SELECT AVG(prix) FROM produit)
+ 

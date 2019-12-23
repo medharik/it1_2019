@@ -1,0 +1,31 @@
+SELECT  libelle , prix , cout, IFNULL(qtestock, 0) ,  prix - cout AS "Marge Ben" ,  
+ifnull(qtestock ,0) * cout AS "Val stock"
+  FROM produit
+
+UPDATE produit SET qtestock =  10
+
+
+ WHERE qtestock IS NULL 
+
+UPDATE produit SET qtestock = qtestock +  100
+
+
+ WHERE qtestock IS NULL AND libelle LIKE '%hp%' 
+
+
+UPDATE produit SET qtestock = qtestock +  100
+
+
+ WHERE  qtestock IS NOT  NULL  AND  libelle LIKE '%hp%' 
+
+UPDATE produit SET prix=prix *0.90 
+WHERE libelle LIKE 'sony%' AND cout >2000
+
+-- fct de groupe ou agregation 
+
+-- COUNT , SUM , AVG , MIN , MAX 
+SELECT COUNT(*) AS "nombre de produit" FROM produit ;
+SELECT SUM(cout*qtestock) FROM produit ;
+SELECT MAX(prix) FROM produit ;
+SELECT min(prix) FROM produit ;
+SELECT AVG(prix) AS "prix moyen " FROM produit ;

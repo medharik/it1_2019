@@ -1,6 +1,6 @@
 Atelier 2 SGBD :
-1-creer une bd : atelier2
-2-creez y une table : 
+E1-creer une bd : atelier2
+E2-creez y une table : 
 	emplyee(id, nom,prenom,salaire, specialite , commission, adresse)
 	id: int primary key auto_increment
 	nom : varchar(50) not null ,
@@ -8,7 +8,7 @@ Atelier 2 SGBD :
 	salaire : float  default 3000
 	specialite : varchar(50) default 'inconnu'
 	commission : float  default 0
-3-
+
 RAPPEL :
 LMD : insert , update et delete
 insert into
