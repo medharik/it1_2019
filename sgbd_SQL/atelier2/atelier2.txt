@@ -7,8 +7,7 @@ E2-creez y une table :
 	prenom : varchar(50) not null ,
 	salaire : float  default 3000
 	specialite : varchar(50) default 'inconnu'
-	commission : float  default 0
-
+	commission : float  
 RAPPEL :
 LMD : insert , update et delete
 insert into
@@ -35,3 +34,5 @@ E-4 augmenter le 1000 DHS le salaire des informaticiens
 E-5 supprimer l'employe 'alami' 'ali'
 E-6 afficher la liste des informaticiens 
 E-7 liste des employes n'ayant pas de commission
+E-8 listes des commerciaux 
+E-8 le salaire  +  commission de chaque employes

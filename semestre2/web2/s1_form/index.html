@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>les bases des formulaires</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>
+      exemple 1 : login / mot de passe form
+    </h2>
+    <form action="">
+      Login : <input type="text" name="login" />
+      <br />
+      Mot de passe : <input type="password" name="passe" />
+      <button>connexion</button>
+    </form>
+    <br />
+    <form action="https://www.google.com/">
+      Votre recherche : <input type="text" name="q" />
+      <button>Rechercher sur google</button>
+    </form>
+    <hr />
+    <form action="">
+      <table border="0" align="center">
+        <tr>
+          <td><label for="login">Login</label></td>
+          <td><input type="text" name="l" id="login" /></td>
+        </tr>
+        <tr>
+          <td><label for="p">Mot de passe :</label></td>
+          <td><input type="password" name="passe" id="p" /></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <label> Homme :<input type="radio" name="hf"/></label>
+            <label> Femme :<input type="radio" name="hf" /> </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Modules :</td>
+          <td>
+            <label> WEB <input type="checkbox" name="module" /> </label>
+            <label> GESTION <input type="checkbox" name="module" /> </label>
+            <label> MOBILE <input type="checkbox" name="module3"/></label>
+          </td>
+        </tr>
+        <tr>
+          <td>Adresse</td>
+          <td>
+            <textarea name="adresse" id="adresse" cols="30" rows="3"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>Ville :</td>
+          <td>
+            <select name="ville" id="">
+              <option value="">Casa</option>
+              <option value="">Rabat</option>
+              <option value="">EL jadida</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button>Rechercher</button></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
