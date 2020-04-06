@@ -1,0 +1,17 @@
+
+LES SGBDR  
+
+base de donnees : 
+- logique : ensemble de donnees structurees sous forme de tables
+    table : se compose  de colonnes (champs) et lignes (records ou enregistrement)
+- physique : fichier gerer par un SGBDR (sur disque dur)
+SGBDR : systeme de gestion des bases de donnees relationnelles  
+exemple :
+access
+SQL SERVER 
+Oracle
+MYSQL
+POSTRESQL
+SQL : langage de requetes structurees
+
+delete fom produit where id=1

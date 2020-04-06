@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>les forms part 2</title>
+  </head>
+  <body>
+    <form action="d.html">
+      <table>
+        <tr>
+          <td><label for="np">Nom & prenom :</label></td>
+          <td>
+            <input
+              type="text"
+              name="np"
+              id="np"
+              required
+              placeholder="Votre nom "
+              autocomplete="off"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="email">Email :</label></td>
+          <td><input type="email" name="email" id="email" /></td>
+        </tr>
+        <tr>
+          <td><label for="p">Mot de passe :</label></td>
+          <td><input type="password" name="p" id="p" /></td>
+        </tr>
+
+        <tr>
+          <td><label for="date">Date de naissance :</label></td>
+          <td><input type="datetime-local" name="dn" id="dn" /></td>
+        </tr>
+        <tr>
+          <td><label for="nr">Nombre de realisations :</label></td>
+          <td>
+            <input
+              type="number"
+              name="nr"
+              id="nr"
+              min="0"
+              max="100"
+              step="10"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="c">Couleur :</label></td>
+          <td><input type="color" name="c" id="c" /></td>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td><label for="co">Couleur :</label></td>
+          <td>
+            RED<input
+              type="checkbox"
+              value="rouge"
+              name="co"
+              id="co"
+              value="vert"
+            />
+            Green<input value="vert" type="checkbox" name="co" id="co" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="co">Sexe :</label></td>
+          <td>
+            <label for="homme">Homme</label>
+            <input type="radio" name="hf" id="homme" value="homme" />
+            <label for="femme">Femme</label>
+            <input type="radio" name="hf" id="femme" value="femme" checked />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="tel">Tel :</label></td>
+          <td><input type="tel" name="t" id="t" /></td>
+        </tr>
+        <tr>
+          <td><label for="s">Recherche :</label></td>
+          <td><input type="search" name="s" id="s" /></td>
+        </tr>
+        <tr>
+          <td><label for="ville">Ville :</label></td>
+          <td>
+            <select name="ville" id="ville">
+              <option value="RABAT" selected>Rabat</option>
+              <option value="CASABLANCA">Casa</option>
+              <option value="">Choissir une ville</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="s">Interval :</label></td>
+          <td>
+            <input
+              type="range"
+              name="a"
+              id="a"
+              value="50"
+              min="0"
+              max="100"
+              step="10"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="s">Message :</label></td>
+          <td>
+            <textarea
+              placeholder="VOtre message..."
+              name="message"
+              id="message"
+              cols="30"
+              rows="5"
+            ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button>Valider</button></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

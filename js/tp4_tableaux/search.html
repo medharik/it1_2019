@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>recherche dans tableau</title>
+  </head>
+  <body>
+    <form action="">
+      Nombre à chercher : <input type="text" name="" id="nombre" />
+      <button type="button" onclick="rechercher()">Ok</button>
+    </form>
+    <div id="resultat"></div>
+    <script>
+      function rechercher() {
+        let champs_nombre = document.getElementById("nombre");
+        let r = document.getElementById("resultat");
+        let tab = [1, 43, 6, 9, 1, 9, 10, 19];
+
+        let valeur = champs_nombre.value;
+        let positions = [];
+        let j = 0;
+        //compteur de calcul des repetition de la valeur saisie dans le champs nombre
+        let cpt = 0;
+
+        for (let i = 0; i < tab.length; i++) {
+          if (tab[i] == valeur) {
+            positions[j] = i;
+            cpt++;
+            j++;
+          }
+        }
+
+        if (positions.length == 0) {
+          r.innerHTML = "nombre introuvable";
+        } else {
+          r.innerHTML =
+            "ce nombre est trouvé  " +
+            cpt +
+            " fois<br> dans les potisions suivantes :";
+          for (let i = 0; i < positions.length; i++) {
+            r.innerHTML += positions[i] + " ";
+          }
+        }
+        console.log("la position du nombre est " + positions);
+      }
+    </script>
+  </body>
+</html>

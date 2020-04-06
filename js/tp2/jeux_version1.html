@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SERIE JEUX ENFANTS : VERSION 1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div style="text-align:center">
+        <label for="">Type d'operation:</label>
+        <select name="operation" id="operation" style="width: 100%;">
+          <option value="-">-</option>
+          <option value="+">+</option>
+          <option value="/">/</option>
+          <option value="*">*</option>
+        </select>
+        <button onclick="generer_nombre_entier(10)">GENERER UN NOMBRE</button>
+      </div>
+      <div id="nombre_aleatoire1" class="b e "></div>
+      <div id="nombre_aleatoire2" class="b e "></div>
+      <div id="reponse_enfant">
+        <label for="reponse">Reponse </label><input type="text" id="rep" />
+        <button type="button" onclick="repondre()">REPONDRE</button>
+      </div>
+      <div id="resultat"></div>
+      <div id="photo" class="b">
+        <img src="" alt="" id="tof" />
+      </div>
+    </div>
+
+    <script>
+      function generer_nombre_entier(max) {
+        let dn1 = document.getElementById("nombre_aleatoire1");
+        let dn2 = document.getElementById("nombre_aleatoire2");
+        let rep = document.getElementById("rep");
+        let n1 = parseInt(Math.random() * max); // 0.25*10 =2.5 => avec parseInt => 2
+        let n2 = parseInt(Math.random() * max); // 0.25*10 =2.5 => avec parseInt => 2
+        dn1.innerHTML = n1;
+        dn2.innerHTML = n2;
+      }
+      generer_nombre_entier(10);
+      function repondre() {
+        let op = document.querySelector("#operation");
+        alert(op.value);
+        let dn1 = document.getElementById("nombre_aleatoire1");
+        let dn2 = document.getElementById("nombre_aleatoire2");
+        let rep = document.getElementById("rep");
+        let resultat = document.getElementById("resultat");
+        let tof = document.getElementById("tof");
+        let n1 = dn1.innerText;
+        let n2 = dn2.innerText;
+        let bonne_reponse = n1 * n2;
+        let reponse_enfant = rep.value;
+        if (bonne_reponse == reponse_enfant) {
+          resultat.innerHTML = "Bonne reponse ";
+          tof.src = "images/ok.gif";
+        } else {
+          resultat.innerHTML = "Mauvaise reponse ";
+          tof.src = "images/ko.gif";
+        }
+      }
+    </script>
+  </body>
+</html>

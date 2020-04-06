@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>intro JS</title>
+  </head>
+  <body>
+    <h3>Intro JS</h3>
+    <form action="">
+      <label for="prix">Prix</label>
+      <input type="text" id="prix" />
+      <label for="taux">Taux</label>
+      <input type="text" id="taux" />
+      <label for="aug">Augmentation :</label>
+      <input
+        type="radio"
+        id="aug"
+        value="augemtation"
+        name="t"
+        onclick="calculer()"
+      />
+
+      <label for="red"> Réduction : </label>
+      <input
+        type="radio"
+        name="t"
+        id="red"
+        value="reduction"
+        onclick="calculer()"
+      />
+      <button type="button" onclick="calculer()">Calculer</button>
+    </form>
+    <div id="message"></div>
+
+    <script>
+      function calculer() {
+        alert(parseInt(Math.random() * 100));
+        var iprix = document.getElementById("prix");
+        var itaux = document.getElementById("taux");
+        var message = document.getElementById("message");
+        var aug = document.getElementById("aug");
+        var red = document.getElementById("red");
+
+        var prix = iprix.value;
+        var taux = itaux.value;
+        if (isNaN(prix) || isNaN(taux)) {
+          message.innerHTML = "ce n'est pas un nombre";
+          message.style.color = "red";
+        } else if (prix >= 0 && taux >= 0 && taux <= 100) {
+          if (aug.checked) {
+            var prix_final = prix * (1 + taux / 100);
+            message.innerHTML =
+              "le prix augmenté par " + taux + " %  est " + prix_final + " DHS";
+          }
+          if (red.checked) {
+            var prix_final = prix * (1 - taux / 100);
+            message.innerHTML =
+              "le prix reduit par " + taux + " %  est " + prix_final + " DHS";
+          }
+
+          message.style.color = "blue";
+        } else {
+          message.innerHTML = "valeurs incorrectes";
+          message.style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>

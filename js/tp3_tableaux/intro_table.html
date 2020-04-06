@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>intro sur les tableaux</title>
+  </head>
+  <body>
+    <h3>
+      Tableau : ensemble d'information indexé (numerote a partir de zero)
+    </h3>
+    Nombre Max : <input type="text" id="nmax" />
+    <button onclick="tab_max()">valider</button>
+    <div id="resultat"></div>
+    <script>
+      let tab1 = [10, 14, 15, 19, 11, 9, 1, 18];
+      let len = tab1.length;
+      function decouvrir_tableau() {
+        for (i = 0; i < len; i++) {
+          console.log("item numero " + (i + 1) + " est " + tab1[i]);
+        }
+      }
+      function tab_max() {
+        let nmax = document.getElementById("nmax").value;
+        let r = document.getElementById("resultat");
+        let message = "";
+        if (isNaN(nmax)) {
+          message = "Erreur, ce n'est pas un nombre ";
+        } else if (nmax < len) {
+          for (i = 0; i < nmax; i++) {
+            //console.log("item numero " + (i + 1) + " est " + tab1[i]);
+            message += "<br>item numero " + (i + 1) + " est " + tab1[i];
+          }
+        } else {
+          message = "le nombre maximal autorise est " + len;
+        }
+
+        r.innerHTML = message;
+
+        console.log("--------------------------------------------");
+      }
+
+      //decouvrir_tableau();
+    </script>
+  </body>
+</html>
