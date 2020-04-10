@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recherche de prix par produit</title>
+  </head>
+  <body>
+    Produit : <input type="text" name="produit" id="produit" /> Prix :
+    <input type="text" name="prix" id="prix" />
+    <button onclick="rechercher_prix()">Afficher le prix</button>
+    <div id="resultat"></div>
+
+    <script>
+      let t_produit = ["hp", "dell", "sony"]; // position = 0
+      let t_prix = [4000, 5000, 6000]; // le prix en position 0 est 4000
+      t_produit.push("acer");
+      t_prix.push(9000);
+      function rechercher_prix() {
+        let produit = document.getElementById("produit");
+        let resultat = document.getElementById("resultat");
+        let position = -1;
+        for (let i = 0; i < t_produit.length; i++) {
+          if (t_produit[i] == produit.value) {
+            position = i;
+          }
+        }
+
+        if (position != -1) {
+          resultat.innerHTML =
+            "le prix du produit " +
+            produit.value +
+            " est " +
+            t_prix[position] +
+            "DHS";
+        } else {
+          resultat.innerHTML =
+            "le produit " + produit.value + " est introuvable ";
+        }
+      }
+    </script>
+  </body>
+</html>

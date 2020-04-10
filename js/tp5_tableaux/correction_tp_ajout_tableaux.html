@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ajout dans un tableau</title>
+  </head>
+  <body>
+    Produit : <input type="text" name="produit" id="produit" /> Prix :
+    <input type="text" name="prix" id="prix" />
+    <button onclick="ajouter()">Ajouter</button>
+
+    <table style="width: 50%;">
+      <thead style="background: black; color: white;">
+        <tr>
+          <th>Produit</th>
+          <th>Prix</th>
+        </tr>
+      </thead>
+      <tbody id="corps"></tbody>
+    </table>
+
+    <script>
+      let t_produit = [];
+      let t_prix = [];
+
+      function ajouter() {
+        let produit = document.getElementById("produit");
+        let prix = document.getElementById("prix");
+        let corps = document.getElementById("corps");
+        let ligne = "";
+        t_produit.push(produit.value);
+        t_prix.push(prix.value);
+
+        for (let i = 0; i < t_produit.length; i++) {
+          ligne +=
+            "<tr> <td>" +
+            t_produit[i] +
+            "</td><td>" +
+            t_prix[i] +
+            "</td> </tr>";
+        }
+        corps.innerHTML = ligne;
+      }
+    </script>
+  </body>
+</html>
